@@ -3,6 +3,7 @@ package xyz.crafttogether.craftcore;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.EventListener;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
@@ -203,6 +204,7 @@ public class CraftCore extends JavaPlugin {
         }
         try {
             jda = JDABuilder.createLight(ConfigHandler.getConfig().getDiscordToken())
+                    .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                     .build()
                     .awaitReady();
         } catch (InterruptedException e) {
