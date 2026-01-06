@@ -15,9 +15,9 @@ public class ConfigHandler {
     private static Config config;
 
     public static void loadConfig() {
-        verifyConfigVersion();  // Verify the config before loading it
         file = new File(CraftCore.getPlugin().getDataFolder() + "/config.yml");
         reloadConfig();
+        verifyConfigVersion();  // Verify the config
     }
 
     public static void reloadConfig() {
