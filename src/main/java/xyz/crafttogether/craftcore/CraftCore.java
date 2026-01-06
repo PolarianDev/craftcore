@@ -47,7 +47,7 @@ public class CraftCore extends JavaPlugin {
     /**
      * Latest version of the config, DO NOT TOUCH
      */
-    private static final int CONFIG_VERSION = 1;
+    private static final int CONFIG_VERSION = 2;
     /**
      * Hashmap containing all the discord commands
      */
