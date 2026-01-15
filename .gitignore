@@ -1,2 +1,6 @@
 .idea/
 target/
+
+# Deployment script
+deploy.conf
+.sftp_password
